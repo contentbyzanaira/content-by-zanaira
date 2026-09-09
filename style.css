@@ -8,22 +8,39 @@ html {
 
 body {
   margin: 0;
-  background: #f5f0e9;
-  color: #171514;
+  background: #080808;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .site {
   max-width: 1400px;
   margin: auto;
-  background: #f5f0e9;
+  background: #080808;
+}
+
+/* GOLD */
+
+h1,
+h2,
+h3,
+.eyebrow,
+.brand-name,
+.brand-logo,
+.footer-logo,
+.package-number,
+.price,
+.about-number,
+.calendar-top h3 {
+  color: #d4af6a;
 }
 
 /* NAVIGATION */
 
 header {
   padding: 24px 5%;
-  border-bottom: 1px solid #d8d0c6;
+  border-bottom: 1px solid #292929;
+  background: #080808;
 }
 
 .nav {
@@ -42,7 +59,7 @@ header {
 .brand-logo {
   width: 42px;
   height: 42px;
-  border: 1px solid #171514;
+  border: 1px solid #d4af6a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -65,7 +82,7 @@ nav {
 
 nav a,
 .social-links a {
-  color: #171514;
+  color: #ffffff;
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2px;
@@ -74,7 +91,7 @@ nav a,
 
 nav a:hover,
 .social-links a:hover {
-  opacity: 0.5;
+  color: #d4af6a;
 }
 
 
@@ -87,6 +104,7 @@ nav a:hover,
   grid-template-columns: 1fr 0.8fr;
   align-items: center;
   gap: 70px;
+  background: #080808;
 }
 
 .eyebrow {
@@ -108,6 +126,7 @@ nav a:hover,
 .hero h1 span,
 h2 span {
   font-style: italic;
+  color: #d4af6a;
 }
 
 .hero-description {
@@ -115,13 +134,14 @@ h2 span {
   font-size: 17px;
   line-height: 1.7;
   margin: 35px 0;
+  color: #ffffff;
 }
 
 .main-button {
   display: inline-block;
   padding: 17px 30px;
-  background: #171514;
-  color: #f5f0e9;
+  background: #d4af6a;
+  color: #080808;
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2px;
@@ -130,7 +150,7 @@ h2 span {
 }
 
 .main-button:hover {
-  background: #b89b72;
+  background: #ffffff;
 }
 
 
@@ -142,7 +162,8 @@ h2 span {
 
 .video-placeholder {
   aspect-ratio: 9 / 12;
-  background: #d8c8b8;
+  background: #181818;
+  border: 1px solid #383838;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,12 +176,13 @@ h2 span {
   position: absolute;
   width: 65px;
   height: 65px;
-  border: 1px solid #171514;
+  border: 1px solid #d4af6a;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
+  color: #d4af6a;
 }
 
 .video-placeholder span {
@@ -168,6 +190,7 @@ h2 span {
   font-size: 18px;
   letter-spacing: 3px;
   text-align: center;
+  color: #ffffff;
 }
 
 
@@ -175,6 +198,7 @@ h2 span {
 
 section {
   padding: 120px 5%;
+  background: #080808;
 }
 
 .section-heading {
@@ -195,18 +219,19 @@ section {
 .section-heading > p:last-child {
   max-width: 500px;
   line-height: 1.7;
+  color: #ffffff;
 }
 
 
 /* WORK */
 
 .work {
-  background: #171514;
-  color: #f5f0e9;
+  background: #111111;
+  color: #ffffff;
 }
 
 .work .eyebrow {
-  color: #b89b72;
+  color: #d4af6a;
 }
 
 .video-grid {
@@ -221,16 +246,18 @@ section {
 
 .video-box {
   aspect-ratio: 9 / 13;
-  background: #292522;
+  background: #1c1c1c;
+  border: 1px solid #303030;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 .video-box:hover {
   transform: translateY(-7px);
+  border-color: #d4af6a;
 }
 
 .video-box::after {
@@ -238,23 +265,26 @@ section {
   position: absolute;
   width: 55px;
   height: 55px;
-  border: 1px solid #f5f0e9;
+  border: 1px solid #d4af6a;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  color: #d4af6a;
 }
 
 .video-box span {
   font-family: Georgia, serif;
   letter-spacing: 3px;
+  color: #ffffff;
 }
 
 .video-card p {
   font-size: 10px;
   letter-spacing: 2px;
   margin-top: 15px;
+  color: #ffffff;
 }
 
 
@@ -264,7 +294,7 @@ section {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   gap: 50px;
-  background: #e9e0d6;
+  background: #080808;
 }
 
 .about-number {
@@ -280,22 +310,22 @@ section {
   font-size: clamp(45px, 7vw, 90px);
 }
 
-.about-content > p:last-child,
-.about-content > p:nth-last-child(2) {
+.about-content > p {
   max-width: 650px;
   font-size: 17px;
   line-height: 1.8;
+  color: #ffffff;
 }
 
 
 /* SERVICES */
 
 .services {
-  background: #f5f0e9;
+  background: #111111;
 }
 
 .service-list {
-  border-top: 1px solid #cfc6bc;
+  border-top: 1px solid #333333;
 }
 
 .service {
@@ -304,12 +334,13 @@ section {
   gap: 30px;
   align-items: center;
   padding: 30px 0;
-  border-bottom: 1px solid #cfc6bc;
+  border-bottom: 1px solid #333333;
 }
 
 .service span {
   font-family: Georgia, serif;
   font-size: 14px;
+  color: #d4af6a;
 }
 
 .service h3 {
@@ -322,13 +353,14 @@ section {
   margin: 0;
   line-height: 1.6;
   font-size: 14px;
+  color: #ffffff;
 }
 
 
 /* PACKAGES */
 
 .packages {
-  background: #ded1c2;
+  background: #080808;
 }
 
 .package-grid {
@@ -338,7 +370,8 @@ section {
 }
 
 .package {
-  background: #f5f0e9;
+  background: #111111;
+  border: 1px solid #333333;
   padding: 40px 30px;
   min-height: 350px;
   display: flex;
@@ -347,9 +380,18 @@ section {
 }
 
 .package.featured {
-  background: #171514;
-  color: #f5f0e9;
+  background: #d4af6a;
+  color: #080808;
   transform: translateY(-15px);
+  border-color: #d4af6a;
+}
+
+.package.featured .package-number,
+.package.featured h3,
+.package.featured .price,
+.package.featured .hours,
+.package.featured p {
+  color: #080808;
 }
 
 .package-number {
@@ -378,6 +420,7 @@ section {
 .package > p:last-child {
   font-size: 14px;
   line-height: 1.6;
+  color: #ffffff;
 }
 
 
@@ -385,7 +428,7 @@ section {
 
 .availability {
   text-align: center;
-  background: #f5f0e9;
+  background: #111111;
 }
 
 .availability .section-heading > p:last-child {
@@ -396,9 +439,9 @@ section {
 .calendar {
   max-width: 850px;
   margin: 60px auto 40px;
-  border: 1px solid #bdb4aa;
+  border: 1px solid #3a3a3a;
   padding: 30px;
-  background: #eee6dd;
+  background: #080808;
 }
 
 .calendar-top {
@@ -420,6 +463,7 @@ section {
   background: transparent;
   font-size: 28px;
   cursor: pointer;
+  color: #d4af6a;
 }
 
 .calendar-days,
@@ -433,6 +477,7 @@ section {
   letter-spacing: 1px;
   padding-bottom: 15px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .calendar-dates div {
@@ -442,18 +487,19 @@ section {
   justify-content: center;
   margin: 2px;
   font-size: 13px;
+  color: #ffffff;
 }
 
 .calendar-dates .available {
-  background: #d8e1d3;
+  background: #34452f;
 }
 
 .calendar-dates .booked {
-  background: #d7aaa3;
+  background: #713b38;
 }
 
 .calendar-dates .limited {
-  background: #e0ca9e;
+  background: #765f32;
 }
 
 .calendar-key {
@@ -463,6 +509,7 @@ section {
   margin-top: 30px;
   font-size: 9px;
   letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .calendar-key span {
@@ -479,28 +526,28 @@ section {
 }
 
 .available-dot {
-  background: #aebda8;
+  background: #78946d;
 }
 
 .booked-dot {
-  background: #bd8580;
+  background: #bd6963;
 }
 
 .limited-dot {
-  background: #c8aa72;
+  background: #c39a52;
 }
 
 
 /* CONTACT */
 
 .contact {
-  background: #171514;
-  color: #f5f0e9;
+  background: #080808;
+  color: #ffffff;
   text-align: center;
 }
 
 .contact .eyebrow {
-  color: #b89b72;
+  color: #d4af6a;
 }
 
 .contact h2 {
@@ -511,11 +558,12 @@ section {
   max-width: 500px;
   margin: 0 auto 35px;
   line-height: 1.7;
+  color: #ffffff;
 }
 
 .contact .main-button {
-  background: #f5f0e9;
-  color: #171514;
+  background: #d4af6a;
+  color: #080808;
 }
 
 .social-links {
@@ -526,18 +574,18 @@ section {
 }
 
 .social-links a {
-  color: #f5f0e9;
+  color: #ffffff;
 }
 
 
 /* FOOTER */
 
 footer {
-  background: #171514;
-  color: #f5f0e9;
+  background: #050505;
+  color: #ffffff;
   text-align: center;
   padding: 50px 20px;
-  border-top: 1px solid #44403c;
+  border-top: 1px solid #292929;
 }
 
 .footer-logo {
@@ -550,6 +598,7 @@ footer p {
   font-size: 9px;
   letter-spacing: 2px;
   margin: 8px;
+  color: #ffffff;
 }
 
 
