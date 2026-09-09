@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  background: #050505;
+  background: #080808;
   color: #f5f1eb;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,11 +16,11 @@ body {
 .site {
   max-width: 1400px;
   margin: auto;
-  background: #050505;
+  background: #080808;
 }
 
 :root {
-  --black: #050505;
+  --black: #080808;
   --soft-black: #111111;
   --gold: #d8b878;
   --champagne: #ead9c3;
@@ -43,7 +43,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 18px;
 }
 
 .brand {
@@ -54,9 +54,10 @@ header {
 
 .brand-logo {
   width: 150px;
-  height: 150px;
+  height: auto;
   object-fit: contain;
   display: block;
+  mix-blend-mode: screen;
 }
 
 .brand-name {
@@ -151,7 +152,7 @@ section {
   min-width: 190px;
   padding: 17px 27px;
   background: var(--gold);
-  color: #050505;
+  color: #080808;
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2.5px;
@@ -682,7 +683,7 @@ section {
 /* FOOTER */
 
 footer {
-  background: #050505;
+  background: #080808;
   color: var(--white);
   text-align: center;
   padding: 55px 20px;
@@ -717,8 +718,8 @@ footer p {
   }
 
   .brand-logo {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: auto;
   }
 
   .hero {
@@ -776,7 +777,7 @@ footer p {
   }
 
   header {
-    padding: 15px 20px;
+    padding: 18px 20px;
   }
 
   .brand-name {
@@ -786,7 +787,7 @@ footer p {
 
   .brand-logo {
     width: 115px;
-    height: 115px;
+    height: auto;
   }
 
   .hero h1 {
