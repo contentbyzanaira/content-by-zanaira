@@ -31,9 +31,7 @@ body {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
   border-bottom: 1px solid var(--line);
@@ -43,40 +41,29 @@ header {
 .nav {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 30px 5% 28px;
+  padding: 28px 5%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .brand {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .brand-logo {
-  width: 210px;
-  height: 210px;
+  width: 115px;
+  height: 115px;
   object-fit: contain;
   display: block;
-}
-
-.brand-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 35px;
-  flex-wrap: wrap;
+  gap: 32px;
 }
 
 nav a {
@@ -92,9 +79,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   GENERAL
-========================= */
+/* GENERAL */
 
 section {
   padding: 110px 5%;
@@ -138,9 +123,7 @@ h1 span {
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .main-button {
   display: inline-block;
@@ -170,9 +153,7 @@ h1 span {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   min-height: 850px;
@@ -224,9 +205,7 @@ h1 span {
 }
 
 
-/* =========================
-   WORK
-========================= */
+/* WORK */
 
 .work {
   background: var(--soft-black);
@@ -265,9 +244,7 @@ h1 span {
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about {
   max-width: 1300px;
@@ -299,9 +276,7 @@ h1 span {
 }
 
 
-/* =========================
-   PACKAGES
-========================= */
+/* PACKAGES */
 
 .packages {
   background: var(--soft-black);
@@ -361,9 +336,7 @@ h1 span {
 }
 
 
-/* =========================
-   AVAILABILITY
-========================= */
+/* AVAILABILITY */
 
 .availability {
   text-align: center;
@@ -476,9 +449,7 @@ h1 span {
 }
 
 
-/* =========================
-   FAQ
-========================= */
+/* FAQ */
 
 .faq {
   background: var(--soft-black);
@@ -547,9 +518,7 @@ h1 span {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact {
   text-align: center;
@@ -587,9 +556,7 @@ h1 span {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   border-top: 1px solid var(--line);
@@ -612,24 +579,25 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
   .nav {
-    padding: 25px 5% 30px;
-    gap: 25px;
+    padding: 20px 5%;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .brand-logo {
-    width: 190px;
-    height: 190px;
+    width: 145px;
+    height: 145px;
   }
 
   nav {
     gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   nav a {
@@ -708,18 +676,18 @@ footer p {
   .faq details p {
     margin-right: 20px;
   }
-}
 
+}
 
 @media (max-width: 500px) {
 
-  .brand-logo {
-    width: 200px;
-    height: 200px;
-  }
-
   .video-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand-logo {
+    width: 160px;
+    height: 160px;
   }
 
   .calendar-top h3 {
