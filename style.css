@@ -8,18 +8,18 @@ html {
 
 body {
   margin: 0;
-  background: #080808;
-  color: #ffffff;
+  background: #0b0908;
+  color: #f3ece3;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .site {
   max-width: 1400px;
   margin: auto;
-  background: #080808;
+  background: #0b0908;
 }
 
-/* GOLD */
+/* COLOUR PALETTE */
 
 h1,
 h2,
@@ -32,15 +32,16 @@ h3,
 .price,
 .about-number,
 .calendar-top h3 {
-  color: #d4af6a;
+  color: #d8c0a0;
 }
+
 
 /* NAVIGATION */
 
 header {
   padding: 24px 5%;
-  border-bottom: 1px solid #292929;
-  background: #080808;
+  border-bottom: 1px solid #3a3129;
+  background: #0b0908;
 }
 
 .nav {
@@ -59,7 +60,7 @@ header {
 .brand-logo {
   width: 42px;
   height: 42px;
-  border: 1px solid #d4af6a;
+  border: 1px solid #d8c0a0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -82,7 +83,7 @@ nav {
 
 nav a,
 .social-links a {
-  color: #ffffff;
+  color: #f3ece3;
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2px;
@@ -91,7 +92,7 @@ nav a,
 
 nav a:hover,
 .social-links a:hover {
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 
@@ -104,7 +105,7 @@ nav a:hover,
   grid-template-columns: 1fr 0.8fr;
   align-items: center;
   gap: 70px;
-  background: #080808;
+  background: #0b0908;
 }
 
 .eyebrow {
@@ -126,7 +127,7 @@ nav a:hover,
 .hero h1 span,
 h2 span {
   font-style: italic;
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .hero-description {
@@ -134,23 +135,38 @@ h2 span {
   font-size: 17px;
   line-height: 1.7;
   margin: 35px 0;
-  color: #ffffff;
+  color: #f3ece3;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-book {
+  margin-top: 12px;
 }
 
 .main-button {
   display: inline-block;
-  padding: 17px 30px;
-  background: #d4af6a;
-  color: #080808;
+  padding: 15px 24px;
+  background: transparent;
+  color: #d8c0a0;
+  border: 1px solid #d8c0a0;
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .main-button:hover {
-  background: #ffffff;
+  background: #d8c0a0;
+  color: #0b0908;
 }
 
 
@@ -162,8 +178,8 @@ h2 span {
 
 .video-placeholder {
   aspect-ratio: 9 / 12;
-  background: #181818;
-  border: 1px solid #383838;
+  background: #171311;
+  border: 1px solid #493d33;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,13 +192,13 @@ h2 span {
   position: absolute;
   width: 65px;
   height: 65px;
-  border: 1px solid #d4af6a;
+  border: 1px solid #d8c0a0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .video-placeholder span {
@@ -190,7 +206,7 @@ h2 span {
   font-size: 18px;
   letter-spacing: 3px;
   text-align: center;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
@@ -198,7 +214,7 @@ h2 span {
 
 section {
   padding: 120px 5%;
-  background: #080808;
+  background: #0b0908;
 }
 
 .section-heading {
@@ -219,19 +235,19 @@ section {
 .section-heading > p:last-child {
   max-width: 500px;
   line-height: 1.7;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
 /* WORK */
 
 .work {
-  background: #111111;
-  color: #ffffff;
+  background: #11100e;
+  color: #f3ece3;
 }
 
 .work .eyebrow {
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .video-grid {
@@ -246,8 +262,8 @@ section {
 
 .video-box {
   aspect-ratio: 9 / 13;
-  background: #1c1c1c;
-  border: 1px solid #303030;
+  background: #191614;
+  border: 1px solid #3b322b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,7 +273,7 @@ section {
 
 .video-box:hover {
   transform: translateY(-7px);
-  border-color: #d4af6a;
+  border-color: #d8c0a0;
 }
 
 .video-box::after {
@@ -265,26 +281,26 @@ section {
   position: absolute;
   width: 55px;
   height: 55px;
-  border: 1px solid #d4af6a;
+  border: 1px solid #d8c0a0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .video-box span {
   font-family: Georgia, serif;
   letter-spacing: 3px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 .video-card p {
   font-size: 10px;
   letter-spacing: 2px;
   margin-top: 15px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
@@ -294,7 +310,7 @@ section {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   gap: 50px;
-  background: #080808;
+  background: #0b0908;
 }
 
 .about-number {
@@ -314,18 +330,18 @@ section {
   max-width: 650px;
   font-size: 17px;
   line-height: 1.8;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
 /* SERVICES */
 
 .services {
-  background: #111111;
+  background: #11100e;
 }
 
 .service-list {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #3b322b;
 }
 
 .service {
@@ -334,13 +350,13 @@ section {
   gap: 30px;
   align-items: center;
   padding: 30px 0;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #3b322b;
 }
 
 .service span {
   font-family: Georgia, serif;
   font-size: 14px;
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .service h3 {
@@ -353,14 +369,14 @@ section {
   margin: 0;
   line-height: 1.6;
   font-size: 14px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
 /* PACKAGES */
 
 .packages {
-  background: #080808;
+  background: #0b0908;
 }
 
 .package-grid {
@@ -370,8 +386,8 @@ section {
 }
 
 .package {
-  background: #111111;
-  border: 1px solid #333333;
+  background: #151210;
+  border: 1px solid #493d33;
   padding: 40px 30px;
   min-height: 350px;
   display: flex;
@@ -380,10 +396,10 @@ section {
 }
 
 .package.featured {
-  background: #d4af6a;
-  color: #080808;
+  background: #d8c0a0;
+  color: #0b0908;
   transform: translateY(-15px);
-  border-color: #d4af6a;
+  border-color: #d8c0a0;
 }
 
 .package.featured .package-number,
@@ -391,7 +407,7 @@ section {
 .package.featured .price,
 .package.featured .hours,
 .package.featured p {
-  color: #080808;
+  color: #0b0908;
 }
 
 .package-number {
@@ -420,7 +436,7 @@ section {
 .package > p:last-child {
   font-size: 14px;
   line-height: 1.6;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
@@ -428,7 +444,7 @@ section {
 
 .availability {
   text-align: center;
-  background: #111111;
+  background: #11100e;
 }
 
 .availability .section-heading > p:last-child {
@@ -439,9 +455,9 @@ section {
 .calendar {
   max-width: 850px;
   margin: 60px auto 40px;
-  border: 1px solid #3a3a3a;
+  border: 1px solid #493d33;
   padding: 30px;
-  background: #080808;
+  background: #0b0908;
 }
 
 .calendar-top {
@@ -463,7 +479,7 @@ section {
   background: transparent;
   font-size: 28px;
   cursor: pointer;
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .calendar-days,
@@ -477,7 +493,7 @@ section {
   letter-spacing: 1px;
   padding-bottom: 15px;
   font-weight: bold;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 .calendar-dates div {
@@ -487,19 +503,19 @@ section {
   justify-content: center;
   margin: 2px;
   font-size: 13px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 .calendar-dates .available {
-  background: #34452f;
+  background: #334331;
 }
 
 .calendar-dates .booked {
-  background: #713b38;
+  background: #653b38;
 }
 
 .calendar-dates .limited {
-  background: #765f32;
+  background: #6a5838;
 }
 
 .calendar-key {
@@ -509,7 +525,7 @@ section {
   margin-top: 30px;
   font-size: 9px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 .calendar-key span {
@@ -526,28 +542,28 @@ section {
 }
 
 .available-dot {
-  background: #78946d;
+  background: #718b67;
 }
 
 .booked-dot {
-  background: #bd6963;
+  background: #a6605a;
 }
 
 .limited-dot {
-  background: #c39a52;
+  background: #b09259;
 }
 
 
 /* CONTACT */
 
 .contact {
-  background: #080808;
-  color: #ffffff;
+  background: #0b0908;
+  color: #f3ece3;
   text-align: center;
 }
 
 .contact .eyebrow {
-  color: #d4af6a;
+  color: #d8c0a0;
 }
 
 .contact h2 {
@@ -558,12 +574,12 @@ section {
   max-width: 500px;
   margin: 0 auto 35px;
   line-height: 1.7;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 .contact .main-button {
-  background: #d4af6a;
-  color: #080808;
+  background: transparent;
+  color: #d8c0a0;
 }
 
 .social-links {
@@ -574,18 +590,18 @@ section {
 }
 
 .social-links a {
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
 /* FOOTER */
 
 footer {
-  background: #050505;
-  color: #ffffff;
+  background: #070605;
+  color: #f3ece3;
   text-align: center;
   padding: 50px 20px;
-  border-top: 1px solid #292929;
+  border-top: 1px solid #3a3129;
 }
 
 .footer-logo {
@@ -598,7 +614,7 @@ footer p {
   font-size: 9px;
   letter-spacing: 2px;
   margin: 8px;
-  color: #ffffff;
+  color: #f3ece3;
 }
 
 
@@ -619,6 +635,15 @@ footer p {
   .hero-visual {
     max-width: 500px;
     margin: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons .main-button {
+    width: auto;
   }
 
   .video-grid {
@@ -672,6 +697,14 @@ footer p {
 
   .hero h1 {
     font-size: 58px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .hero-book {
+    margin-top: 10px;
   }
 
   .video-grid {
