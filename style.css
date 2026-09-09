@@ -806,4 +806,26 @@ footer p {
     font-size: 8px;
   }
 
-  .calendar-days
+  .calendar-days span {
+    font-size: 7px;
+  }
+
+  .calendar-dates div {
+    min-height: 42px;
+    font-size: 11px;
+  }
+
+  .calendar-key {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .faq summary {
+    font-size: 14px;
+  }
+
+  .faq summary b {
+    font-size: 21px;
+  }
+
+}
