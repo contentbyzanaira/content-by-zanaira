@@ -58,3 +58,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Calendar connection error:", error);
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".video-box video");
+
+  if (!video) return;
+
+  video.addEventListener("click", () => {
+    video.muted = false;
+    video.play();
+
+    if (video.webkitEnterFullscreen) {
+      video.webkitEnterFullscreen();
+    } else if (video.requestFullscreen) {
+      video.requestFullscreen();
+    }
+  });
+});
