@@ -1,34 +1,60 @@
 const CALENDAR_API = "https://script.google.com/macros/s/AKfycbwX0jmaepm1C5RoS1EpgYZNYobiOonmOqNV-r-5zTPT0oZJysaAL2XuGTaVfXzc3-epLA/exec";
 
-async function loadAvailability() {
+document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch(CALENDAR_API);
     const events = await response.json();
 
+    const calendarDates = document.querySelectorAll(".calendar-dates > div");
+
     const bookedDates = new Set();
+    const limitedDates = new Set();
 
     events.forEach(event => {
-      let date = new Date(event.start + "T00:00:00");
-      const end = new Date(event.end + "T00:00:00");
+      let start = new Date(event.start + "T00:00:00");
+      let end = new Date(event.end + "T00:00:00");
 
-      while (date <= end) {
-        bookedDates.add(date.toISOString().split("T")[0]);
-        date.setDate(date.getDate() + 1);
+      // Google all-day events normally end on the following day
+      end.setDate(end.getDate() - 1);
+
+      while (start <= end) {
+        const date = start.toISOString().split("T")[0];
+
+        if (event.title && event.title.toLowerCase().includes("limited")) {
+          limitedDates.add(date);
+        } else {
+          bookedDates.add(date);
+        }
+
+        start.setDate(start.getDate() + 1);
       }
     });
 
-    document.querySelectorAll(".calendar-day").forEach(day => {
-      const date = day.dataset.date;
+    // Your current calendar is September 2026
+    const year = 2026;
+    const month = 8; // September (January = 0)
 
-      if (bookedDates.has(date)) {
+    calendarDates.forEach(day => {
+      const number = parseInt(day.textContent.trim());
+
+      if (isNaN(number)) return;
+
+      const date = new Date(year, month, number);
+      const dateString =
+        date.getFullYear() + "-" +
+        String(date.getMonth() + 1).padStart(2, "0") + "-" +
+        String(date.getDate()).padStart(2, "0");
+
+      day.classList.remove("booked", "limited");
+
+      if (bookedDates.has(dateString)) {
         day.classList.add("booked");
-        day.classList.remove("available", "limited");
+      } else if (limitedDates.has(dateString)) {
+        day.classList.add("limited");
       }
     });
 
   } catch (error) {
     console.error("Calendar connection error:", error);
   }
-}
-
-loadAvailability();
+});
