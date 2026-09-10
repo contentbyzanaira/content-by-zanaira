@@ -64,27 +64,55 @@ document.addEventListener("DOMContentLoaded", async () => {
   const videos = document.querySelectorAll(".video-box video");
 
   videos.forEach(video => {
-    video.addEventListener("click", async () => {
 
-      video.muted = false;
-      video.volume = 1;
+    video.addEventListener("click", () => {
 
-      try {
-        await video.play();
-      } catch (error) {
-        console.log("Video play error:", error);
-      }
+      // Create fullscreen viewer
+      const overlay = document.createElement("div");
+      overlay.className = "video-fullscreen";
 
-      if (video.requestFullscreen) {
-        try {
-          await video.requestFullscreen();
-        } catch (error) {
-          console.log("Fullscreen unavailable:", error);
+      // Create video
+      const fullscreenVideo = document.createElement("video");
+      fullscreenVideo.src = video.currentSrc || video.querySelector("source")?.src;
+      fullscreenVideo.autoplay = true;
+      fullscreenVideo.loop = true;
+      fullscreenVideo.muted = false;
+      fullscreenVideo.controls = true;
+      fullscreenVideo.playsInline = true;
+
+      // Add video to overlay
+      overlay.appendChild(fullscreenVideo);
+      document.body.appendChild(overlay);
+
+      // Prevent page scrolling
+      document.body.style.overflow = "hidden";
+
+      // Play with sound
+      fullscreenVideo.play().catch(error => {
+        console.log("Fullscreen video play error:", error);
+      });
+
+      // Close when tapping outside the video
+      overlay.addEventListener("click", event => {
+        if (event.target === overlay) {
+          fullscreenVideo.pause();
+          overlay.remove();
+          document.body.style.overflow = "";
         }
-      } else if (video.webkitEnterFullscreen) {
-        video.webkitEnterFullscreen();
-      }
+      });
+
+      // Escape key closes it
+      document.addEventListener("keydown", function closeVideo(event) {
+        if (event.key === "Escape") {
+          fullscreenVideo.pause();
+          overlay.remove();
+          document.body.style.overflow = "";
+          document.removeEventListener("keydown", closeVideo);
+        }
+      });
+
     });
+
   });
 
 });
