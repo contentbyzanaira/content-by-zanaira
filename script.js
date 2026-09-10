@@ -1,6 +1,8 @@
 const CALENDAR_API = "https://script.google.com/macros/s/AKfycbwX0jmaepm1C5RoS1EpgYZNYobiOonmOqNV-r-5zTPT0oZJysaAL2XuGTaVfXzc3-epLA/exec";
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+  // Calendar
   try {
     const response = await fetch(CALENDAR_API);
     const events = await response.json();
@@ -14,7 +16,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       let start = new Date(event.start + "T00:00:00");
       let end = new Date(event.end + "T00:00:00");
 
-      // Google all-day events normally end on the following day
       end.setDate(end.getDate() - 1);
 
       while (start <= end) {
@@ -30,9 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
-    // Your current calendar is September 2026
     const year = 2026;
-    const month = 8; // September (January = 0)
+    const month = 8;
 
     calendarDates.forEach(day => {
       const number = parseInt(day.textContent.trim());
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (isNaN(number)) return;
 
       const date = new Date(year, month, number);
+
       const dateString =
         date.getFullYear() + "-" +
         String(date.getMonth() + 1).padStart(2, "0") + "-" +
@@ -57,20 +58,33 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Calendar connection error:", error);
   }
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const video = document.querySelector(".video-box video");
 
-  if (!video) return;
 
-  video.addEventListener("click", () => {
-    video.muted = false;
-    video.play();
+  // Portfolio videos
+  const videos = document.querySelectorAll(".video-box video");
 
-    if (video.webkitEnterFullscreen) {
-      video.webkitEnterFullscreen();
-    } else if (video.requestFullscreen) {
-      video.requestFullscreen();
-    }
+  videos.forEach(video => {
+    video.addEventListener("click", async () => {
+
+      video.muted = false;
+      video.volume = 1;
+
+      try {
+        await video.play();
+      } catch (error) {
+        console.log("Video play error:", error);
+      }
+
+      if (video.requestFullscreen) {
+        try {
+          await video.requestFullscreen();
+        } catch (error) {
+          console.log("Fullscreen unavailable:", error);
+        }
+      } else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+      }
+    });
   });
+
 });
