@@ -280,20 +280,12 @@ section {
 .video-box:hover {
   transform: translateY(-7px);
   border-color: var(--gold);
+}gold);
 }
 
-.video-box::after {
-  content: "▶";
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+
+
+.
 }
 
 .video-box span {
